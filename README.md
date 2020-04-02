@@ -1,4 +1,4 @@
-# Koppeltaal Architectuur 1.3.x
+# Koppeltaal Architectuur 1.3.x.y
 
 ![Logo\_vZVZ\_servicecentrum.JPG](.gitbook/assets/0.jpeg)
 
@@ -1310,7 +1310,8 @@ De informatie-uitwisseling wordt gerealiseerd via FHIR-berichten met daarin info
 
 Tabel 5. Koppeltaal ZIB model
 
-## Interactie tussen Informatiesystemen
+## 
+Interactie tussen Informatiesystemen
 
 Koppeltaal ondersteund alleen de voorgedefinieerde interacties en binnen deze sectie zullen wij kijken naar deze interacties tussen informatiesystemen. De primaire functies worden hieronder in detail uitgewerkt. De functies die aan de orde komen zijn:
 
@@ -4064,6 +4065,7 @@ Notitie: De System Uri’s vindt men bij [http://fhir.nl/fhir/NamingSystems/\[Sy
 | :--- | :--- | :--- |
 | Parent | Parent | This CarePlan is a part of the given CarePlan. |
 
-\[1\] De Event.code is een element van de MessageHeader en identifeert het berichttype \(of interactie\).  
+\[1\] De Event.code is een element van de MessageHeader en identifeert het berichttype \(of interactie\).
+  
 
 
