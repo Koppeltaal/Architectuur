@@ -9,8 +9,8 @@ bezoekadres: Oude Middenweg 55, 2491 AC Den Haag
 telefoon: (070) 317 34 50; fax: (070) 320 74 37; e-mail:info@vzvz.nl
 www.vzvz.nl
 
-Het is niet toegestaan om zonder voorafgaande toestemming van VZVZ Servicecentrum de 
-gegevens te kopiëren, te wijzigen, te distribueren, te verspreiden, of 
+Het is niet toegestaan om zonder voorafgaande toestemming van VZVZ Servicecentrum 
+de gegevens te kopiëren, te wijzigen, te distribueren, te verspreiden, of 
 op andere wijze te gebruiken en / of te exploiteren
 ```
 
