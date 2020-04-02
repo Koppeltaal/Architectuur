@@ -18,7 +18,7 @@
         <p></p>
         <p>Het is niet toegestaan om zonder voorafgaande toestemming van VZVZ Servicecentrum
           de gegevens te kopi&#xEB;ren, te wijzigen, te distribueren, te verspreiden,
-          of op andere wijze te gebruiken en / of te exploiteren.</p>
+          of op andere wijze te gebruiken en / of te exploiteren..</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
