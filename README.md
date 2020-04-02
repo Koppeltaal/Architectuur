@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th style="text-align:left"></th>
+      <th style="text-align:left"></th>
     </tr>
   </thead>
   <tbody>
@@ -19,17 +20,38 @@
           de gegevens te kopi&#xEB;ren, te wijzigen, te distribueren, te verspreiden,
           of op andere wijze te gebruiken en / of te exploiteren.</p>
       </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Datum</td>
+      <td style="text-align:left">2 april 2020</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Versie</td>
+      <td style="text-align:left">1.4.4</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Status</td>
+      <td style="text-align:left">GitBook Draft</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Classificatie</td>
+      <td style="text-align:left">Koppeltaal</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Contact</td>
+      <td style="text-align:left">koppeltaal-architectuur@vzvz.nl</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>| Naam | Waarde |
-| :--- | :--- |
-| Datum | 2 april 2020 |
-| Versie | 1.4.4 |
-| Status | Definitief |
-| Classificatie | Koppeltaal |
-| Contact | koppeltaal-architectuur@vzvz.nl |
-
-Wijzigingen
+</table>Wijzigingen
 
 <table>
   <thead>
