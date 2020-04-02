@@ -2,19 +2,26 @@
 
 ![Logo\_vZVZ\_servicecentrum.JPG](.gitbook/assets/0.jpeg)
 
-```text
-Koppeltaal Architectuur 1.3.x
-postadres: Postbus 30920, 2500 GX Den Haag
-bezoekadres: Oude Middenweg 55, 2491 AC Den Haag
-telefoon: (070) 317 34 50; fax: (070) 320 74 37; e-mail:info@vzvz.nl
-www.vzvz.nl
-
-Het is niet toegestaan om zonder voorafgaande toestemming van VZVZ Servicecentrum 
-de gegevens te kopiëren, te wijzigen, te distribueren, te verspreiden, of 
-op andere wijze te gebruiken en / of te exploiteren
-```
-
-| Naam | Waarde |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>postadres: Postbus 30920, 2500 GX Den Haag</p>
+        <p>bezoekadres: Oude Middenweg 55, 2491 AC Den Haag</p>
+        <p>telefoon: (070) 317 34 50; fax: (070) 320 74 37; e-mail:info@vzvz.nl www.vzvz.nl</p>
+        <p></p>
+        <p>Het is niet toegestaan om zonder voorafgaande toestemming van VZVZ Servicecentrum
+          de gegevens te kopi&#xEB;ren, te wijzigen, te distribueren, te verspreiden,
+          of op andere wijze te gebruiken en / of te exploiteren.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>| Naam | Waarde |
 | :--- | :--- |
 | Datum | 2 april 2020 |
 | Versie | 1.4.4 |
@@ -199,7 +206,7 @@ Wijzigingen
 
 ### Doel en scope
 
-Het doel van dit document is om de architectuur van Koppeltaal GGZ te beschrijven, zoals deze is in versie . Versie van Koppeltaal is op FHIR Messaging API gebaseerd. Met deze beschrijving kan VZVZ-verantwoordelijkheid nemen voor de architectuur van Koppeltaal en kunnen toekomstige plannen voor Koppeltaal onder architectuur doorgevoerd worden. De scope is een beschrijving van de architectuur op ‘Enterprise Architectuur’ niveau, waarbij het TOGAF-raamwerk, en de Archimedes methode zoveel mogelijk gebruikt worden als taal voor vastlegging van de architectuur.
+Het doel van dit document is om de architectuur van Koppeltaal GGZ te beschrijven, zoals deze is in versie 1.3.x. Versie 1.3.x van Koppeltaal is op FHIR Messaging API gebaseerd. Met deze beschrijving kan VZVZ-verantwoordelijkheid nemen voor de architectuur van Koppeltaal en kunnen toekomstige plannen voor Koppeltaal onder architectuur doorgevoerd worden. De scope is een beschrijving van de architectuur op ‘Enterprise Architectuur’ niveau, waarbij het TOGAF-raamwerk, en de Archimedes methode zoveel mogelijk gebruikt worden als taal voor vastlegging van de architectuur.
 
 De architectuurbeschrijving beperkt zich tot het wat en hoe van Koppeltaal ‘zelf’. Daar waar relaties met de organisatie en de processen van Koppeltaal en VZVZ relevant zijn worden deze relaties wel benoemd, maar niet verder uitgewerkt. In dit document vind je bijvoorbeeld geen beschrijving van het proces van ketenbeheer, maar wel een beschrijving van voor de architectuur belangrijke rollen en functionaliteiten voor Ketenbeheer. Voor de zaken buiten scope wordt op een nader te bepalen plaats de beschrijving ontwikkeld en beheerd. Waar deze beschikbaar is proberen we daarnaar te verwijzen.
 
@@ -213,9 +220,7 @@ Dit architectuurdocument is bedoeld voor VZVZ om vragen te kunnen beantwoorden o
 
 De architectuurbeschrijving in dit document is globaal onder te verdelen in drie secties, namelijk de ‘Business Architectuur’, de ‘Informatiesysteem Architectuur’ en de ‘Technische of Infrastructuur Architectuur’.
 
-![](.gitbook/assets/1%20%282%29.png)
-
-Figuur 1. Koppeltaal architectuur
+![Koppeltaal architectuur](.gitbook/assets/1%20%282%29.png)
 
 De samenhang van Koppeltaal is gecompliceerd. De keuze voor beschrijving in lagen zorgt ervoor dat aspecten die eerst op hoofdlijnen zijn besproken, in een later hoofdstuk in detail worden uitgewerkt. Ook gebeurt het in dit document dat een aspect van de architectuur eerst vanuit een bepaald gezichtspunt wordt beschreven \(bijvoorbeeld de gebruiker\) en dat datzelfde aspect in een later hoofdstuk opnieuw wordt beschreven, maar dan vanuit een ander gezichtspunt \(bijvoorbeeld de beheerder\).
 
@@ -447,9 +452,7 @@ Bij een blended care behandeling zijn tenminste een **cliënt** en een **behande
 
 #### Positie van Koppeltaal in het GGZ-referentiedomeinen model[\[4\]]()
 
-![](.gitbook/assets/2%20%281%29.png)
-
-Figuur 2. Businessrollen waar Koppeltaal een functie heeft.
+![Businessrollen waar Koppeltaal een functie heeft](.gitbook/assets/2%20%281%29.png)
 
 In het door GGZ Nederland en Nictiz opgestelde GGZ Domein referentiemodel speelt Koppeltaal een mogelijke rol in de met een groene cirkel aangeduide sub domeinen.
 
@@ -465,9 +468,7 @@ In de doelstelling van stichting Koppeltaal is middels het woord ‘interne’ e
 
 Gegevens worden uitgewisseld tussen verschillende **applicaties.** In Koppeltaal staat het begrip applicaties voor alle vormen van ICT-systemen en eHealthplatforms die voor een zorgaanbieder relevant zijn om gegevens tussen uit te wisselen in de context van blended care behandelingen in de **instelling**. Applicaties worden geleverd door verschillende **leveranciers.** Deze leveranciers gebruiken Koppeltaal om gegevens uit te wisselen onder verantwoordelijkheid van de zorgaanbieder in een domein. Domeinen zijn voor applicaties beschikbaar via de **Koppeltaal Server**, een applicatie die via internet beschikbaar is voor bij Koppeltaal aangesloten leveranciers.
 
-![](.gitbook/assets/3%20%282%29.tif)
-
-Figuur 3. Koppeltaal domeinen, applicaties en beheerfuncties
+![Koppeltaal domeinen, applicaties en beheerfuncties](.gitbook/assets/ktketen.jpg)
 
 #### Beheer interacties:
 
