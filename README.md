@@ -248,6 +248,8 @@ In de doelstelling van stichting Koppeltaal is middels het woord ‘interne’ e
 
 Gegevens worden uitgewisseld tussen verschillende **applicaties.** In Koppeltaal staat het begrip applicaties voor alle vormen van ICT-systemen en eHealthplatforms die voor een zorgaanbieder relevant zijn om gegevens tussen uit te wisselen in de context van blended care behandelingen in de **instelling**. Applicaties worden geleverd door verschillende **leveranciers.** Deze leveranciers gebruiken Koppeltaal om gegevens uit te wisselen onder verantwoordelijkheid van de zorgaanbieder in een domein. Domeinen zijn voor applicaties beschikbaar via de **Koppeltaal Server**, een applicatie die via internet beschikbaar is voor bij Koppeltaal aangesloten leveranciers.
 
+
+
 ![Koppeltaal domeinen, applicaties en beheerfuncties](.gitbook/assets/ktketen.jpg)
 
 #### Beheer interacties:
