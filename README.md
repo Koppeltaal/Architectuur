@@ -6,7 +6,7 @@ description: Dit is de testpagina
 
 ## Testpagina
 
-* test a1
-* test b2
-* test c3
+* test a
+* test b
+* test c
 
