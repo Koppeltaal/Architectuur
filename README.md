@@ -2,7 +2,7 @@
 description: Dit is de testpagina
 ---
 
-# Initial page
+# Startpagina voor test
 
 ## Testpagina
 
