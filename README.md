@@ -1,12 +1,12 @@
 ---
 description: >-
-  Koppeltaal-architectuur 1.3.x wordt bepaald door het doel van Koppeltaal,
-  het zorgproces, de uitwisselingsbehoefte en de technologie.
+  De Koppeltaal-architectuur 1.3.x wordt bepaald door het doel van Koppeltaal, het
+  zorgproces, de uitwisselingsbehoefte en de technologie.
 ---
 
 # Koppeltaal 1.3.x architectuur
 
-![](.gitbook/assets/koppeltaal.jpg)
+![Logo\_vZVZ\_servicecentrum.JPG](.gitbook/assets/koppeltaal.jpg)
 
 ## Doel en aanleiding
 
