@@ -10,9 +10,11 @@ description: >-
 
 ### Domein en Applicatie
 
-In de doelstelling van stichting Koppeltaal is middels het woord ‘interne’ een beperking voor de gegevensuitwisseling opgenomen. Met deze beperking wordt bedoeld dat de gegevensuitwisseling altijd plaatsvindt onder de verantwoordelijkheid van één **zorgaanbieder.** In de Koppeltaal architectuur is daarom gekozen voor het concept **domein.** Een domein, in Koppeltaal, is synoniem aan een zorgaanbieder, en beperkt de gegevensuitwisseling tot _interne gegevensuitwisseling_ onder verantwoordelijkheid van de betreffende zorgaanbieder.
+In de doelstelling van stichting Koppeltaal is middels het woord ‘interne’ een beperking voor de gegevensuitwisseling opgenomen. Met deze beperking wordt bedoeld dat de gegevensuitwisseling altijd plaatsvindt onder de verantwoordelijkheid van één **zorgaanbieder.** In de Koppeltaal architectuur is daarom gekozen voor het concept **domein.** Een domein, in Koppeltaal, is synoniem aan een zorgaanbieder, en beperkt de gegevensuitwisseling tot _interne gegevensuitwisseling_ onder verantwoordelijkheid van de betreffende zorgaanbieder. 
 
-De gegevensuitwisseling vindt plaats tussen applicaties. In Koppeltaal staat het begrip **applicatie** voor alle vormen van eHealth platformen en informatiesystemen \(zoals portalen, interventie- en bronsystemen\) die voor de zorgaanbieder relevant zijn om gegevens tussen uit te wisselen, in de context van blended care behandelingen.
+De gegevensuitwisseling vindt plaats tussen applicaties. In Koppeltaal staat het begrip **applicatie** voor alle vormen van eHealth platformen en informatiesystemen \(zoals portalen, interventie- en bronsystemen\) die voor de zorgaanbieder relevant zijn om gegevens tussen uit te wisselen, in de context van blended care behandelingen. 
+
+Aan de hand van de gebruikte credentials die een applicatie gebruikt wordt bepaald in welk domein de gegevens worden uitgewisseld.
 
 ![Koppeltaal applicaties](.gitbook/assets/2%20%281%29.jpeg)
 
@@ -73,7 +75,7 @@ Koppeltaal heeft een set berichten gedefinieerd waarmee de Koppeltaal use-cases 
 
 Omdat Koppeltaal gebruik maakt van FHIR DSTU1 zijn er bepaalde \(Koppeltaal\) resource concepten die niet gedefinieerd zijn voor FHIR of die buiten het interessegebied van HL7 liggen. Hiervoor gebruiken we de _Other_ resource, zodat we ook met specifieke Koppeltaal resources kunnen omgaan.
 
-![Koppeltaal FHIR Resource DSTU1](.gitbook/assets/5%20%282%29.jpeg)
+![Gegevensmodel](.gitbook/assets/resources%20%281%29.jpg)
 
 ### MessageHeader
 
@@ -83,7 +85,7 @@ De ontvanger van het bericht verwerkt het verzoek en retourneert eventueel een a
 
 ### CarePlan
 
-Het **CarePlan** is \(nu\) de meest gebruikte resource, binnen Koppeltaal 1.3.x. Het CarePlan wordt als raamwerk gebruikt \(en is een extractie of een vertaling van een behandelplan\) om een blended care behandeling op te starten en te volgen. Hierin worden activiteiten, die in het kader van de zorg, aan één patiënt toegewezen. Verder worden de betrokkenen \(participanten\) bij de behandeling in het CarePlan vastgelegd.
+Het **CarePlan** is \(nu\) de meest gebruikte resource, binnen Koppeltaal 1.3.x. Het CarePlan wordt als raamwerk gebruikt \(en is een extractie of een vertaling van een behandelplan\) om een blended care behandeling op te starten en te volgen. Hierin worden activiteiten \(of taken\), die in het kader van de zorg, aan één patiënt toegewezen. Een activiteit bevat een cruciale referentie naar de [ActivityDefintion ](informatiesystemen-architectuur.md#activitydefinition)op welke deze is gebaseerd, dit is nodig om te weten welke activiteit door Koppeltaal uitgevoerd moet worden. Verder worden de betrokkenen \([participanten](informatiesystemen-architectuur.md#participant)\) bij de behandeling in het CarePlan vastgelegd.
 
 ### Participant
 
@@ -184,7 +186,8 @@ In het volgende overzicht ziet men met welke interacties de verschillende use-ca
         <p>Voortgang monitoren</p>
       </td>
       <td style="text-align:left">UpdateCarePlanActivityStatus GetMessage(Headers)</td>
-      <td style="text-align:left">Voortgang en status van een activiteit delen en ontvangen van een interventie.</td>
+      <td style="text-align:left">Voortgang en status van een activiteit delen en ontvangen van een interventie.
+        Een interventie is aan een behandelplan gerelateerd.</td>
     </tr>
     <tr>
       <td style="text-align:left">
