@@ -826,9 +826,8 @@ De use-cases benoemen niet alleen de actoren, maar noemen ook “bedrijfsobjecte
 
 Om Koppeltaal als integratie standaard van informatiesystemen ter beschikking te stellen voor instellingen voor Geestelijke Gezondheidszorg, zijn er beheerprocessen nodig tussen zorgaanbieders, leveranciers en stichting Koppeltaal.
 
-We onderscheiden de volgende functionele beheer lagen \(zie Beheerprocessen\).
 
-Deze paragraaf is (tijdelijk) onder constructie.
+**Deze paragraaf is (tijdelijk) onder constructie.**
 
 
 ## Koppeltaal kwaliteitseisen \(ISO-norm 25010\)
