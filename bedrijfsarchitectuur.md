@@ -828,26 +828,8 @@ Om Koppeltaal als integratie standaard van informatiesystemen ter beschikking te
 
 We onderscheiden de volgende functionele beheer lagen \(zie Beheerprocessen\).
 
-We hebben **Koppeltaalregie** die de kwaliteit en levering van uitbestede diensten door aanbieders coördineert.
+Deze paragraaf is (tijdelijk) onder constructie.
 
-We hebben **Koppeltaalketen** die ervoor zorgt dat de juiste gegevens en informatie beschikbaar komt voor de ketenpartners van Koppeltaal en het aanmeldpunt is van meldingen, verzoeken en gegevens.
-
-We hebben **Koppeltaalcomponenten** die ervoor zorgt dat de verschillende Koppeltaal componenten \(systemen\) beschikbaar zijn voor de ondersteuning en gebruikersbeheer van informatievoorziening. Daarnaast wordt gekeken of de Koppeltaal componenten in lijn zijn met de gestelde bedrijfsdoelen. Deze worden vastgelegd in architectuurproducten en bewaakt door de architectuur.
-
-We hebben **Koppeltaaldiensten** die onderverdeeld zijn in de volgende ondersteunende beheerprocessen:
-
-* Functioneel beheer. Het in stand houden en aansturen van de informatievoorziening.
-* Domeinbeheer. Het ervoor zorgen dat de domeinen beschikbaar zijn
-* Identiteitenbeheer. Het beheren en beschikbaar stellen van gegevens van gebruikers en hun autorisaties.
-* Applicatiebeheer. Het aanpassen van toepassingsprogrammatuur en gegevensverzamelingen.
-* Infrastructuurbeheer Het in stand houden en beheren van de-infrastructuur en ontwikkelingen daarvan.
-* Applicatieontwikkeling Het ontwikkelen toepassingsprogrammatuur en gegevensverzamelingen.
-
-De rollen Regie- en Keten Support worden door VZVZ-servicecentrum uitgevoerd
-
-De Leverancier Support rol worden door de verschillende ICT- en adapter leveranciers ingevuld. De Koppeltaal Support wordt in eerste instantie door VZVZ uitgevoerd.
-
-![Beheerprocessen](.gitbook/assets/5%20%281%29.jpeg)
 
 ## Koppeltaal kwaliteitseisen \(ISO-norm 25010\)
 
