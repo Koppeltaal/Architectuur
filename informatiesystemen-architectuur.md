@@ -18,6 +18,7 @@ Aan de hand van de gebruikte credentials die een applicatie gebruikt wordt bepaa
 
 ![Koppeltaal applicaties](.gitbook/assets/koppeltaalcollaboration.jpg)
 
+
 De volgende type applicaties onderscheiden we waarmee zorgaanbieders hun informatiesystemen naadloos op elkaar willen aansluiten binnen Koppeltaal.
 
 Een **eHealth platform** is een \(elektronisch\) platform waar participanten \(betrokkenen\) in de zorg op een veilige en efficiënte manier informatie \(inclusief persoonsgegevens\) ‘_over’_ een behandeling kunnen uitwisselen en interventies kunnen gebruiken en uit kunnen voeren voor gebruik ‘_in’_ een \(blended care\) behandeling.
