@@ -822,13 +822,11 @@ De use-cases benoemen niet alleen de actoren, maar noemen ook “bedrijfsobjecte
 
 ![Bedrijfsobjecten](.gitbook/assets/4%20%282%29.jpeg)
 
-## Beheerprocessen
+## Koppeltaal Dossier Afspraken en Procedures
 
-Om Koppeltaal als integratie standaard van informatiesystemen ter beschikking te stellen voor instellingen voor Geestelijke Gezondheidszorg, zijn er beheerprocessen nodig tussen zorgaanbieders, leveranciers en stichting Koppeltaal.
+Om Koppeltaal als integratie standaard van informatiesystemen ter beschikking te stellen voor instellingen voor Geestelijke Gezondheidszorg, zijn er afspraken en procedures nodig tussen GGZ-instelling, haar applicatie-leveranciers, Koppeltaal Support en de regie-organisatie Koppeltaal. Deze werkafspraken zijn aanvullend op de bestaande contractuele relatie tussen GGZ-instelling en haar applicatie-leveranciers die via Koppeltaal met elkaar zijn verbonden.Hiervoor is het [Koppeltaal Dossier Afspraken en Procedures \(DAP\)](https://www.koppeltaal.nl/sites/default/files/content-files/Koppeltaal%20DAP%20versie%201.1.pdf) geschreven om technische uitwisseling van patiëntgegevens in de Koppeltaal keten zo goed mogelijk te ondersteunen door heldere afspraken tussen alle sleutelspelers in de keten vast te leggen.
 
-
-**Deze paragraaf is (tijdelijk) onder constructie.**
-
+De afspraken in deze Koppeltaal-DAP zijn gebaseerd op de architectuur van Koppeltaal en bekrachtigd bij besluit van de IT-Deelnemerraad van Koppeltaal.
 
 ## Koppeltaal kwaliteitseisen \(ISO-norm 25010\)
 
