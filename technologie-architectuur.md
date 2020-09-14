@@ -538,7 +538,7 @@ Na succesvolle authenticatie wordt geverifieerd dat het domein dat in het berich
 
 ### De Single-Sign-On \(SSO\) flow
 
-Bij Koppeltaal maken we gebruik van Single-Sign-On \(SSO\). Hiermee kunnen eindgebruikers zich eenmalig authentiseren \(inlog procedure\), waarna automatisch toegang wordt verschaft tot meerdere type applicaties en resources in het Koppeltaal domein.
+Bij Koppeltaal maken we gebruik van Single-Sign-On \(SSO\). Hiermee kunnen eindgebruikers zich eenmalig authentiseren \(inlog procedure\), waarna automatisch toegang wordt verschaft tot meerdere type applicaties en resources in het Koppeltaal domein. 
 
 Koppeltaal ondersteunt twee typen van Single-Sign-On flows, met Koppeltaal Server als OAuth2-compatibele autorisatieserver en de Applicatie als OAuth2 Client:
 
@@ -1890,7 +1890,7 @@ CareTeam \(Other\)
 | **CarePlanActivityStatus.percentageCompleted** |  |
 | Definition | An indication of the progress made on the CarePlanActivity. |
 | Control | 0..1 |
-| Type | integer |
+| Type | decimal |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus\#PercentageCompleted |
 | **CarePlanActivityStatus.blackBoxState** |  |
 | Definition | BlackBoxState allows applications using Koppeltaal to extend messages with information that is not necessarily understood by other applications. The application including BlackBoxState must subscribe to the message to which the BlackBoxState is attached, allowing the application to reload the BlackBoxState next time the application starts for a certain user. BlackBoxState is implemented using the FHIR extension mechanism. Extensions can be nested. For an example, look at how the ProcessingStatus extension is defined for the MessageHeader resource. Applications using BlackBoxState must create a FHIR profile that describes their extension\(s\). |
