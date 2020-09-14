@@ -804,7 +804,7 @@ In de volgende tabel staat welke FHIR resource entries minimaal aanwezig moeten 
 
 FHIR Messagetypes
 
-\[1\] De Event.code is een element van de MessageHeader en identifeert het berichttype \(of interactie\).
+\[1\] De Event.code is een element van de MessageHeader en identificeert het berichttype \(of interactie\).
 
 ## FHIR Resources
 
