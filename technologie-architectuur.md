@@ -1632,7 +1632,7 @@ ActivityDefinition \(Other\)
 | **CarePlan.status** |  |
 | Definition | Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record. |
 | Control | 1..1 |
-| Binding | CarePlanStatus: Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record. \(See http://hl7.org/fhir/DSTU1/care-plan-status.html for values.\) |
+| Binding | CarePlanStatus: Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record. \(See [http://hl7.org/fhir/DSTU1/care-plan-status.html](http://hl7.org/fhir/DSTU1/care-plan-status.html) for values.\) |
 | Type | Code |
 | Is modifier | True |
 | **CarePlan.participant** |  |
@@ -1665,7 +1665,7 @@ ActivityDefinition \(Other\)
 | **CarePlan.goal.status** |  |
 | Definition | Indicates whether the goal has been reached and is still considered relevant. |
 | Control | 0..1 |
-| Binding | CarePlanGoalStatus: Indicates whether the goal has been met and is still being targeted \(see http://hl7.org/fhir/DSTU1/care-plan-goal-status.html for values\). |
+| Binding | CarePlanGoalStatus: Indicates whether the goal has been met and is still being targeted \(see [http://hl7.org/fhir/DSTU1/care-plan-goal-status.html](http://hl7.org/fhir/DSTU1/care-plan-goal-status.html) for values\). |
 | Type | Code |
 | **CarePlan.goal.notes** |  |
 | Definition | Any comments related to the goal. |
@@ -2525,7 +2525,7 @@ Practitioner
 | **RelatedPerson.relationship** |  |
 | Definition | The nature of the relationship between a Patient and the related person. |
 | Control | 0..1 |
-| Binding | PatientRelationshipType: \(see [http://hl7.org/fhir/vs/relatedperson-relationshiptype](http://hl7.org/fhir/vs/relatedperson-relationshiptype)\) |
+| Binding | PatientRelationshipType: \(see [https://www.hl7.org/fhir/DSTU1/valueset-relatedperson-relationshiptype.html](https://www.hl7.org/fhir/DSTU1/valueset-relatedperson-relationshiptype.html)\) |
 | Type | CodeableConcept |
 | **RelatedPerson.name** |  |
 | Definition | A name associated with the person. |
