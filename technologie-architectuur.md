@@ -21,7 +21,7 @@ De netwerktopologie beschrijft de fysieke verbindingen tussen de netwerkcomponen
 
 ### Het informatiemodel
 
-Het volgende model geeft de verzameling FHIR DSTU1 resources weer die binnen Koppeltaal 1.3 worden gebruikt. Het Koppeltaal 1.3 informatiemodel is gebaseerd FHIR Messaging \(berichten\). Bij FHIR Messaging is men gedwongen om een verzameling van resources \(gegevens\) op te halen, ongeacht of men daarvan maar een deel van gebruikt.  
+Het volgende model geeft de verzameling FHIR DSTU1 resources weer die binnen Koppeltaal 1.3 worden gebruikt. De FHIR specificatie definieert een set van datatypes die als FHIR resource elementen gebruikt worden. Het Koppeltaal 1.3 informatiemodel is gebaseerd FHIR Messaging \(berichten\). Bij FHIR Messaging is men gedwongen om een verzameling van resources \(gegevens\) op te halen, ongeacht of men daarvan maar een deel van gebruikt.  
 
 ![FHIR Resources](.gitbook/assets/fhir-resources%20%281%29.jpg)
 
@@ -808,6 +808,12 @@ FHIR Messagetypes
 
 ## FHIR Resources
 
+### Data Types
+
+De FHIR resource elementen worden gespecificeerd aan de hand van een set data types. Er zijn twee categorieën data types: de eenvoudige en primitieve types, geïmporteerd uit de XML Schema \([https://www.w3.org/TR/xmlschema-2](https://www.w3.org/TR/xmlschema-2/)\) en complexe types, die herbruikbare clusters van elementen zijn.
+
+De set data types die in de FHIR resources elementen uit de Technologie architectuur worden gebruikt, vindt men in [FHIR DSTU 1 Data Types](http://hl7.org/fhir/DSTU1/datatypes.html) terug.
+
 ### FHIR Bundle \(Atom Feeds\)
 
 Een veelvoorkomende bewerking die met FHIR resources wordt uitgevoerd, is het verzamelen van FHIR resources in één instantie \(bericht\). In FHIR wordt dit bundelen genoemd, Dit bundelen bevat niet alleen verwijzingen naar FHIR resources maar ook de volledige inhoud van de FHIR resources
@@ -849,7 +855,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Uri (as defined in RFC3986)</td>
+      <td style="text-align:left">uri (as defined in RFC3986)</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>feed.title</b>
@@ -866,7 +872,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Comment</td>
@@ -888,7 +894,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">DateTimeType</td>
+      <td style="text-align:left">dateTime</td>
     </tr>
     <tr>
       <td style="text-align:left">Comment</td>
@@ -909,7 +915,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Comment</td>
@@ -992,7 +998,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String. Example: label=&quot;{label<b>}&quot;</b>
+      <td style="text-align:left">string. Example: label=&quot;{label<b>}&quot;</b>
       </td>
     </tr>
     <tr>
@@ -1029,7 +1035,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">URI</td>
+      <td style="text-align:left">uri</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>feed.entry.id</b>
@@ -1047,7 +1053,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">URI</td>
+      <td style="text-align:left">uri</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>feed.entry.link</b>
@@ -1079,7 +1085,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">URI</td>
+      <td style="text-align:left">uri</td>
     </tr>
     <tr>
       <td style="text-align:left">Attribute</td>
@@ -1094,7 +1100,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>feed.entry.opdated</b>
@@ -1113,7 +1119,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">DateTime</td>
+      <td style="text-align:left">dateTime</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>feed.entry.content</b>
@@ -1150,7 +1156,7 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
   </tbody>
 </table>
@@ -1194,7 +1200,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Id</td>
+      <td style="text-align:left">id</td>
     </tr>
     <tr>
       <td style="text-align:left">Comments</td>
@@ -1218,7 +1224,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Instant</td>
+      <td style="text-align:left">instant</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>MessageHeader.event</b>
@@ -1276,7 +1282,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>MessageHeader.source.software</b>
@@ -1294,7 +1300,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Comments</td>
@@ -1316,7 +1322,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Requirements</td>
@@ -1337,7 +1343,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Uri</td>
+      <td style="text-align:left">uri</td>
     </tr>
     <tr>
       <td style="text-align:left">Comments</td>
@@ -1428,7 +1434,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Code</td>
+      <td style="text-align:left">code</td>
     </tr>
     <tr>
       <td style="text-align:left">Binding</td>
@@ -1454,7 +1460,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Instant</td>
+      <td style="text-align:left">instant</td>
     </tr>
     <tr>
       <td style="text-align:left">Extension</td>
@@ -1479,7 +1485,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Extension</td>
@@ -1500,7 +1506,7 @@ FHIR Bundle \(Atom feed\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">boolean</td>
     </tr>
     <tr>
       <td style="text-align:left">Extension</td>
@@ -1543,12 +1549,12 @@ Volgende plaatje laat zien dat de MessageHeader resource is uitgebreid met het P
 | **ActivityDefinition.activityDefinitionIdentifier** |  |
 | Definition | A unique identifier for this activity definition. |
 | Control | 0..1 |
-| Type | Identifier |
+| Type | identifier |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/ActivityDefinition\#ActivityDefinitionIdentifier |
 | **ActivityDefinition.identifier** |  |
 | Definition | One or more unique identifier for this activity definition. |
 | Control | 0..\* |
-| Type | Identifier |
+| Type | identifier |
 | Notes | Deprecated |
 | **ActivityDefinition.description** |  |
 | Definition | A description of the activity. May be used to judge the intended use of an activity. |
@@ -1590,7 +1596,7 @@ Volgende plaatje laat zien dat de MessageHeader resource is uitgebreid met het P
 | **ActivityDefinition.defaultPerformer** |  |
 | Definition | The person that is normally responsible for performing this activity. |
 | Control | 0..1 |
-| Type | Code |
+| Type | code |
 | Binding | [ActivityPerformer](technologie-architectuur.md#activityperformer) |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/ActivityDefinition\#DefaultPerformer |
 | **ActivityDefinition.isActive** |  |
@@ -1633,7 +1639,7 @@ ActivityDefinition \(Other\)
 | Definition | Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record. |
 | Control | 1..1 |
 | Binding | CarePlanStatus: Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record. \(See [http://hl7.org/fhir/DSTU1/care-plan-status.html](http://hl7.org/fhir/DSTU1/care-plan-status.html) for values.\) |
-| Type | Code |
+| Type | code |
 | Is modifier | True |
 | **CarePlan.participant** |  |
 | Definition | Identifies all people and organizations who are expected to be involved in the care envisioned by this plan. |
@@ -1666,7 +1672,7 @@ ActivityDefinition \(Other\)
 | Definition | Indicates whether the goal has been reached and is still considered relevant. |
 | Control | 0..1 |
 | Binding | CarePlanGoalStatus: Indicates whether the goal has been met and is still being targeted \(see [http://hl7.org/fhir/DSTU1/care-plan-goal-status.html](http://hl7.org/fhir/DSTU1/care-plan-goal-status.html) for values\). |
-| Type | Code |
+| Type | code |
 | **CarePlan.goal.notes** |  |
 | Definition | Any comments related to the goal. |
 | Control | 0..1 |
@@ -1720,7 +1726,7 @@ ActivityDefinition \(Other\)
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan\#SubActivityStatus |
 | Comments | Note that the list of assigned subactivities may differ from the list of subactivities available in the ActivityDefinition. This means that the assigner of the careplan has chosen to not let the performer perform all subactivities. The list of assigned subactivities should be a subset of the subactivites available in the ActivityDefinition. |
 | Binding | [CarePlanActivityStatus](technologie-architectuur.md#careplanactivitystatus) |
-| Type | Code |
+| Type | code |
 | **CarePlan.activity.goal** |  |
 | Definition | Describes the intended objective\(s\) of carrying out this activity. |
 | Control | 0..\* |
@@ -1821,7 +1827,7 @@ In de definitiebepaling van het CareTeam is zo veel mogelijk gebruik gemaakt van
 | **CareTeam.Identifier** |  |
 | Defnitie | Identifier voor het care team die het care team binnen het domein uniek identificeert |
 | Control | 0..\* |
-| Type | Identifier |
+| Type | identifier |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/CareTeam\#CareTeamIdentifier |
 | **CareTeam.status** |  |
 | Definitie | Geeft de status van het care team aan. |
@@ -1895,7 +1901,7 @@ CareTeam \(Other\)
 | **CarePlanActivityStatus.blackBoxState** |  |
 | Definition | BlackBoxState allows applications using Koppeltaal to extend messages with information that is not necessarily understood by other applications. The application including BlackBoxState must subscribe to the message to which the BlackBoxState is attached, allowing the application to reload the BlackBoxState next time the application starts for a certain user. BlackBoxState is implemented using the FHIR extension mechanism. Extensions can be nested. For an example, look at how the ProcessingStatus extension is defined for the MessageHeader resource. Applications using BlackBoxState must create a FHIR profile that describes their extension\(s\). |
 | Control | 0..1 |
-| Type | Base64Binary |
+| Type | base64Binary |
 | Extension | \#Field as defined by application that owns this |
 | Comments | This extension must be further defined in a profile by the owner. |
 
@@ -2204,7 +2210,7 @@ CarePlanActivityResult \(Other\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
     </tr>
     <tr>
       <td style="text-align:left">Invariants</td>
@@ -2227,7 +2233,7 @@ CarePlanActivityResult \(Other\)
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
-      <td style="text-align:left">Identifier</td>
+      <td style="text-align:left">identifier</td>
     </tr>
     <tr>
       <td style="text-align:left">Invariants</td>
@@ -2449,7 +2455,7 @@ Organization
 | **Patient.identifier** |  |
 | Definition | An identifier that applies to this person as a Patient. |
 | Control | 0..\* |
-| Type | Identifier |
+| Type | identifier |
 | Comments | All known identifiers shall be given. A typical identifier for a Patient is the BSN. If no other identifier is known, a system specific identifier can be given. \(See [Identifiers ](technologie-architectuur.md#identifiers)for information on formatting.\) |
 | **Patient.name** |  |
 | Definition | A list of names associated with the person. |
@@ -2472,7 +2478,7 @@ Organization
 | **Patient.age** |  |
 | Definition | The age of the individual. |
 | Control | 0..1 |
-| Type | Integer |
+| Type | integer |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/Patient\#Age |
 | **Patient.address** |  |
 | Definition | Addresses for the individual. |
@@ -2495,7 +2501,7 @@ Patient
 | **Practitioner.identifier** |  |
 | Definition | An identifier that applies to this person in this role. |
 | Control | 0..\* |
-| Type | Identifier |
+| Type | identifier |
 | Comments | All known identifiers shall be given. A typical identifier for a Practitioner is the AGB or UZI code. If no other identifier is known, a system specific identifier can be given. \(See [Identifiers ](technologie-architectuur.md#identifiers)for information on formatting.\) |
 | **Practitioner.organization** |  |
 | Definition | The organization that the practitioner represents. |
@@ -2516,7 +2522,7 @@ Practitioner
 | **RelatedPerson.identifier** |  |
 | Definition | Identifier for a person within a particular scope. |
 | Control | 0..\* |
-| Type | Identifier |
+| Type | identifier |
 | Comments | All known identifiers shall be given. A typical identifier for a person is the BSN. If no other identifier is known, a system specific identifier can be given. \(See [Identifiers ](technologie-architectuur.md#identifiers)for information on formatting.\) |
 | **RelatedPerson.patient** |  |
 | Definition | The Patient this person is related to. |
@@ -2561,7 +2567,7 @@ RelatedPerson
 | **Application.identifier** |  |
 | Definition | Identifiers assigned to this application by various organizations. The most likely organizations to assign identifiers are the manufacturer and the owner, though regulatory agencies may also assign an identifier. The identifiers identify the particular device, not the kind of device. |
 | Control | 0..1 |
-| Type | Identifier |
+| Type | identifier |
 | **Application.type** |  |
 | Definition | The kind of device. |
 | Control | 1..1 |
@@ -2589,7 +2595,7 @@ Application
 | **UserMessage.context** |  |
 | Definition | An uri that describes the context of the message. |
 | Control | 0..1 |
-| Type | Uri |
+| Type | uri |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/UserMessage\#Context |
 | **UserMessage.code** |  |
 | Definition | Allows Koppeltaal to recognize the Other resource as a UserMessage. |
