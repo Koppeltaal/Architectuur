@@ -128,6 +128,10 @@ Synoniemen: Cliënt
 
 Een portaal is een webpagina die uit diverse bronnen geselecteerde informatie biedt en/of toegang geeft tot verschillende informatiebronnen en/of services \(apps\).
 
+### Profiling
+
+Het aanscherpen van bestaande specificaties in de vorm van structuur definities \(structure definitions\), uitbreidingen \(extensions\) en onderlinge verwijzingen \(references\). Hierdoor is het mogelijk een specifieke set van resources voor een bepaalde "use case" \(klantenreis\) te definiëren.
+
 ### Resource
 
 FHIR hanteert de definitie Resource \(lijst met mogelijke Resources: [https://www.hl7.org/fhir/resourcelist.html](https://www.hl7.org/fhir/resourcelist.html)\)
@@ -158,11 +162,21 @@ Versnellingsprogramma Informatie-uitwisseling Patiënt en Professional.
 
 Vereniging van Zorgaanbieders voor Zorgcommunicatie.
 
+### ZIB
+
+Een ZIB \(Zorg Informatie Bouwsteen\) is een gegevensmodel bestaande uit één of meer gegevenselementen, inclusief hun betekenis, datatypes en onderlinge relaties, die als geheel een relevant zorginhoudelijk concept beschrijven.
+
 ### Zorgaanbieder
 
 Een instelling dan wel een solistisch werkende zorgverlener.
 
 Synoniemen: Zorginstelling, domein
+
+### Zorgteam
+
+Het zorgteam omvat alle zorgaanbieders die van plan zijn deel te nemen aan de coördinatie en behandeling voor een patiënt.
+
+Synoniemen: CareTeam
 
 
 
