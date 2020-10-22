@@ -11,7 +11,7 @@ description: >-
 
 **Koppeltaal \(server\)** huidige release : 1.3.7. 
 
-Geplande release 1.3.8 in November 2020.
+Geplande release 1.3.8 eind November 2020.
 
 Release 1.3.6  is een herstelversie van 1.3.5.
 
@@ -41,19 +41,17 @@ Volgende  punten zijn hierin opgenomen:
 | ICE-601 | Bug | Display waarden voor ActivityKind in KT aangepast. |
 | ICE-464 | FeatureRequest | Koppeltaal online autorisaties inzichtelijk gemaakt dmv autorisatie tabel. |
 
-Herstelversie 1.3.8 wordt verwacht in November.
+Herstelversie 1.3.8 wordt eind November verwacht.
 
 Hierin zijn de volgende punten in opgenomen:
 
 | Ticket | Type | Omschrijving |
 | :--- | :--- | :--- |
-| ICE-763 | Epic | Het authenticatie proces volgens de specificatie aan het werk krijgen \(Zie FO Authenticatie Koppeltaal beheerschermen v1.1\). |
-| ICE-654 | Bug | Dubbele punt in wachtwoord. |
+| ICE-654 | Bug | Dubbele punt in wachtwoord waardoor authenticatie faalt. |
 | ICE-647 | Change Request | Het '&' teken in ActivityDefinition zorgt voor foutmelding. |
-| ICE-630 | Bug | Syntax fout in wachtwoord . |
+| ICE-630 | Bug | Syntax fout in wachtwoord. Beleidsregels aanzetten voor wachtwoord. |
 | ICE-599 | Bug | Wachtwoord herstel problemen. |
 | ICE-598 | BUG | Functionaliteit van verificatiecode werkt niet correct. |
-| ICE-323 | Feature Request | Indicatoren in kaart brengen voor ketenregisseur. |
 | ICE-183 | Feature Request | Bericht identifier toevoegen in WebHook POST. |
 
 **Supported Koppeltaal release:** 1.3.5
@@ -61,6 +59,8 @@ Hierin zijn de volgende punten in opgenomen:
 ## Planning
 
 Release 1.3.5 is by design ontworpen vanuit de behoefte van beheerorganisaties om de migratie van hun applicaties onafhankelijk van elkaar te kunnen doorvoeren. Applicaties die nog op 1.3.3 uitwisselen, kunnen by design uitwisselen met applicaties die al op 1.3.5 communiceren. Alle partijen worden opgeroepen om zo spoedig mogelijk de migratie af te ronden door hun applicatie in productie te voorzien van release 1.3.5 of hoger van Koppeltaal.
+
+Release 1.3.8 is een herstelversie van 1.3.5 en wordt eind November in productie gebracht.
 
 ## API specificaties
 
@@ -78,14 +78,75 @@ Feedback via e-mail: [koppeltaal-testteam@vzvz.nl](mailto:koppeltaal-testteam@vz
 
 Voor community leden die nog niet actief zijn in de productiefase van Koppeltaal is het raadzaam om de koppeling met Koppeltaal te ontwikkelen op basis van Koppeltaal 1.3.5. De impact daarvan is relatief beperkt, en je voorkomt extra inspanningen om na ingebruikname alsnog binnen enkele maanden na release op productie alsnog verplicht te moeten upgraden naar Koppeltaal 1.3.5.
 
-| **Actie** | **Environment** | **Huidige serverrelease**  | **Date Available** | **Remark**  |
-| :--- | :--- | :--- | :--- | :--- |
-|  Koppeltaal Kern Test |  [Edgekoppeltaal.vhscloud.nl](http://edgekoppeltaal.vhscloud.nl/)    | 1.3.6 | Sinds 8 november 2019 | Vrij testen voor IT-deelnemers tegen de laatste Koppeltaalserver kern versie |
-| Koppeltaal Adapter Test | [Acckoppeltaal.vhscloud.nl](http://acckoppeltaal.vhscloud.nl/) | 1.3.5.4 | Sinds 13 december 2019 | IT-deelnemers: Ketentesten adapter tegen koppeltaal kern versie 1.3.5 |
-| Koppeltaal Applicatie Acceptatie  | [Clientskoppeltaal.vhscloud.nl](http://clientskoppeltaal.vhscloud.nl/)   | 1.3.5.3 | Sinds 10 oktober 2019 | IT-deelnemers: Acceptatietesten d.m.v. demo applicaties  |
-| Productie | [prd.koppeltaal.nl](https://prd.koppeltaal.nl/) | 1.3.5.4 | Sinds 18 december 2019 | Live-omgeving voor zorgcommunicatie met Koppeltaal  |
-| Stable | [Stablekoppeltaal.vhscloud.nl](http://stablekoppeltaal.vhscloud.nl/) | 1.3.5.4 | Sinds 9 januari 2020 | Omgeving ten behoeve van productie incidenten testen |
-| Demo | [Demokoppeltaal.vhscloud.nl](http://demokoppeltaal.vhscloud.nl/) | 1.3.5.4 | Sinds 9 januari 2020 | Omgeving ten behoeve demo's geven  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Omgeving</th>
+      <th style="text-align:left"><b>Environment</b>
+      </th>
+      <th style="text-align:left"><b>Huidige Koppeltaal versie</b>
+      </th>
+      <th style="text-align:left">Omschrijving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Edge</td>
+      <td style="text-align:left"> <a href="http://edgekoppeltaal.vhscloud.nl/">Edgekoppeltaal.vhscloud.nl</a>
+        <br
+        />
+      </td>
+      <td style="text-align:left">1.3.8</td>
+      <td style="text-align:left">Testomgeving van de community, met de nieuwste (deel)release of bugfix.
+        Als er een complete release staat, dan wordt door VZVZ Koppeltaal Testteam
+        de release geaccepteerd alvorens het naar Acc te laten gaan.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Acceptatie</td>
+      <td style="text-align:left"><a href="http://acckoppeltaal.vhscloud.nl/">Acckoppeltaal.vhscloud.nl</a>
+      </td>
+      <td style="text-align:left">1.3.7</td>
+      <td style="text-align:left">Ketentestomgeving voor GGZ (toekomstige Koppeltaal Kern release)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Productie</td>
+      <td style="text-align:left"><a href="https://prd.koppeltaal.nl/">prd.koppeltaal.nl</a>
+      </td>
+      <td style="text-align:left">1.3.7</td>
+      <td style="text-align:left">Live omgeving voor zorgcommunicatie door cli&#xEB;nten en behandelaren
+        van GGZ-instellingen via applicaties van IT-deelnemers die met elkaar verbonden
+        zijn via Koppeltaal</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Schaduw productie</td>
+      <td style="text-align:left"> <a href="https://prodshadow.vhscloud.nl/">prodshadow.vhscloud.nl</a>
+      </td>
+      <td style="text-align:left">1.3.7</td>
+      <td style="text-align:left">
+        <p>Schaduwomgeving van huidig productie voor KT Support. Bevat de KT-server
+          met dezelfde versie als prd. KT Support kan tijdelijk toegang verlenen
+          voor naspelen van productieincidenten en voor proefmigraties. Partijen
+          kunnen dan tijdelijk een domein inrichten.</p>
+        <p>Alleen met toestemming van VZVZ Koppeltaalketenregie kunnen IT-deelnemers
+          hiervoor een domein laten aanmaken.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Stable</td>
+      <td style="text-align:left"><a href="http://stablekoppeltaal.vhscloud.nl/">Stablekoppeltaal.vhscloud.nl</a>
+      </td>
+      <td style="text-align:left">1.3.7</td>
+      <td style="text-align:left">Ketentestomgeving voor GGZ (huidige Koppeltaal Kern release).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Demo</td>
+      <td style="text-align:left"><a href="http://demokoppeltaal.vhscloud.nl/">Demokoppeltaal.vhscloud.nl</a>
+      </td>
+      <td style="text-align:left">1.3.7</td>
+      <td style="text-align:left">Kan door hele community gebruikt worden voor demo&apos;s</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Core applicaties
 
