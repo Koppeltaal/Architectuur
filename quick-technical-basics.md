@@ -1,7 +1,7 @@
 # Quick technical basics
 
-Versie: 1.00  
-Datum: 18 februari 2020  
+Versie: 1.01  
+Datum: 16 november 2020  
 Auteurs: Joos Brokamp & Joris Scharp, [Headease b.v.](https://headease.nl)
 
 {% hint style="warning" %}
@@ -88,6 +88,31 @@ Ook wel bekend als de Koppelbox. Ontvangen berichten worden slechts minimaal doo
 Lees meer over de Koppelbox in het [Koppeltaal Architectuur document, Het applicatie model](https://vzvz.gitbook.io/koppeltaal-1-3-architectuur/technologie-architectuur#het-applicatie-model)
 {% endhint %}
 
+###  Adapters
+Om berichten te kunnen versturen en/of te ontvangen worden adapters (ook bekend als connectors) aangeboden door Koppeltaal.
+Elke programmeertaal heeft een eigen adapter nodig.
+
+Een adapter kent de volgende verantwoordelijkheden:
+1. Eenvoudig een connectie opzetten met de Koppeltaal server en het domein.  
+2. Middels een simpele API Koppeltaal berichten samenstellen. Deze API is een facade van de HL7 FHIR en Koppeltaal complexiteit.
+De adapter-gebruikers hoeven zich dus geen zorgen maken over de een correcte Koppelaal syntax (bij correct gebruik adapter)  
+3. Berichten ophalen uit de `KoppeltaalMailbox` middels de [GetNextNewAndClaim](https://vzvz.gitbook.io/koppeltaal-1-3-architectuur/technologie-architectuur#bericht-ophalen) functionaliteit. 
+
+{% hint style="warning" %}
+Let op: Het is niet de verantwoordelijkheid van de adapters om Koppeltaal berichten uit de `KoppeltaalMailbox` in de applicatie-database
+op te slaan. De applicaties moeten dus zelf code schrijven om de Koppeltaal data op te slaan en up-to-date te houden. 
+Dit is geen gedeelde functionaliteit omdat er een groot aantal mogelijke combinaties van programmeertalen (en dus adapters) 
+en databases is.
+{% endhint %}
+
+Er zijn adapters beschikbaar voor de volgende programmeertalen (onderstaande links zijn alleen toegankelijk voor leveranciers 
+die toegevoegd zijn in GitHub): 
+ 
+1. [C# Adapter](https://github.com/Koppeltaal/Koppeltaal-C-Sharp-Connector)
+2. [PHP Adapter](https://github.com/Koppeltaal/Koppeltaal-PHP-Connector)
+3. [Python Adapter](https://github.com/Koppeltaal/Koppeltaal-Python-Connector)
+4. [Java Adapter](https://github.com/Koppeltaal/Koppeltaal-Java-Connector)
+
 ## Hoe doe ik x? \(Voorbeelden\)
 
 Onderstaand een aantal veelvoorkomende gebruiksscenario’s.
@@ -122,3 +147,6 @@ Versimpelde actiesequentie:
 Lees meer over Koppeltaal launches in het [Koppeltaal Architectuur document, De Single-Sign-On \(SSO\) flow](https://vzvz.gitbook.io/koppeltaal-1-3-architectuur/technologie-architectuur#de-single-sign-on-sso-flow)
 {% endhint %}
 
+## Changelog
+### Versie 1.0.1
+* Informatie toegevoegd over de verantwoordelijkheden van de adapter
