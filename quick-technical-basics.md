@@ -109,9 +109,9 @@ Er zijn adapters beschikbaar voor de volgende programmeertalen (onderstaande lin
 die toegevoegd zijn in GitHub): 
  
 1. [C# Adapter](https://github.com/Koppeltaal/Koppeltaal-C-Sharp-Connector)
-2. [PHP Adapter](https://github.com/Koppeltaal/Koppeltaal-PHP-Connector)
-3. [Python Adapter](https://github.com/Koppeltaal/Koppeltaal-Python-Connector)
-4. [Java Adapter](https://github.com/Koppeltaal/Koppeltaal-Java-Connector)
+2. [Java Adapter](https://github.com/Koppeltaal/Koppeltaal-Java-Connector) 
+3. [PHP Adapter](https://github.com/Koppeltaal/Koppeltaal-PHP-Connector)
+4. [Python Adapter](https://github.com/Koppeltaal/Koppeltaal-Python-Connector) 
 
 ## Hoe doe ik x? \(Voorbeelden\)
 
