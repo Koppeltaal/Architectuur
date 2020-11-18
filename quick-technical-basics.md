@@ -93,7 +93,8 @@ Om berichten te kunnen versturen en/of te ontvangen worden adapters (ook bekend 
 Elke programmeertaal heeft een eigen adapter nodig.
 
 Een adapter kent de volgende verantwoordelijkheden:
-1. Eenvoudig een connectie opzetten met de Koppeltaal server en het domein.  
+1. Eenvoudig een connectie opzetten met de Koppeltaal server en het domein.
+2. Functionaliteit om een SSO login te ondersteunen  
 2. Middels een simpele API Koppeltaal berichten samenstellen. Deze API is een facade van de HL7 FHIR en Koppeltaal complexiteit.
 De adapter-gebruikers hoeven zich dus geen zorgen maken over de een correcte Koppelaal syntax (bij correct gebruik adapter)  
 3. Berichten ophalen uit de `KoppeltaalMailbox` middels de [GetNextNewAndClaim](https://vzvz.gitbook.io/koppeltaal-1-3-architectuur/technologie-architectuur#bericht-ophalen) functionaliteit. 
