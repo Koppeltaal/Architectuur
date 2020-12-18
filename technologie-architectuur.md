@@ -13,7 +13,7 @@ description: >-
 
 Het transport van berichten volgens Koppeltaal v1.x is gebaseerd op een aantal standaarden: met name _HTTP_, _HL7 FHIR DSTU 1_ \(v0.0.82\) en relevante onderdelen van de HL7 standaard. De content \(inhoud\) kan zowel in _JSON_ als in _XML_ worden uitgedrukt. Koppeltaal gebruikt HTTP als transportmechanisme om FHIR berichten \(resources\) uit te kunnen wisselen en _Atom feed_ om FHIR resources te bundelen. De kern van FHIR wordt gevormd door de _FHIR DSTU1 resources_, waarmee oplossingen voor uitwisseling van zorginhoudelijke gegevens kunnen worden gebouwd. Door middel van profiling \(het maken van specificaties in de vorm van structure definitions en extensions\) en onderlinge verwijzingen is het mogelijk een specifieke set van FHIR resources voor een bepaalde use case, binnen een domein, te definiëren. Elke applicatie type \(eHealth platformen, portalen, interventies of bronsystemen\) gebruikt een eigen set van FHIR resources die via een adapter \(programmeertaal afhankelijke abstractie laag\) met Koppeltaal berichten uitwisselt over het openbare internet.
 
-![FHIR Messaging over HTTP.](.gitbook/assets/fhir-messaging-bericht.jpg)
+![FHIR Messaging over HTTP.](.gitbook/assets/fhir-messaging-bericht%20%281%29.jpg)
 
 ### Netwerktopologie
 
@@ -558,8 +558,12 @@ Wanneer de gebruiker de applicatie URL opent, moeten de volgende gegevens aan Ko
 
 Naast de bovengenoemde velden, kunnen er ook _optionele velden_ gebruikt worden die doorgegeven worden:
 
-1. CarePlanActivity identifier – gebruikt om te achterhalen welke activiteiten een bepaalde applicatie \(Game\) herkent.
+1. CarePlanActivity identifier – gebruikt om te achterhalen welke activiteiten een bepaalde applicatie \(Game\) herkent. 
 2. Aanvullende applicatie informatie - bijvoorbeeld dat er een specifieke pagina door de applicatie moet worden geopend.
+
+{% hint style="warning" %}
+In de huidige Koppeltaal 1.3.x is het _niet verplich_t om een activity id mee te sturen, maar is het _wel wenselijk_. We gedogen dit alleen om de mogelijkheid te scheppen om de SSO tussen twee systemen op te kunnen zetten, waarvoor geen activity id nodig is.
+{% endhint %}
 
 ### SMART Autorisatie voor webapplicaties
 
@@ -1602,7 +1606,7 @@ Volgende plaatje laat zien dat de MessageHeader resource is uitgebreid met het P
 | Binding | [ActivityPerformer](technologie-architectuur.md#activityperformer) |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/ActivityDefinition\#DefaultPerformer |
 | **ActivityDefinition.isActive** |  |
-| Definition | The person that is normally responsible for performing this activity. |
+| Definition | Indicates if the activity is active. |
 | Control | 0..1 |
 | Type | boolean |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/ActivityDefinition\#IsActive |
