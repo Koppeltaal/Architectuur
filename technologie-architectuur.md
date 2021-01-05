@@ -11,7 +11,7 @@ description: >-
 
 ### Standaarden
 
-Het transport van berichten volgens Koppeltaal v1.x is gebaseerd op een aantal standaarden: met name _HTTP_, _HL7 FHIR DSTU 1_ \(v0.0.82\) en relevante onderdelen van de HL7 standaard.  De content \(inhoud\) kan zowel in _JSON_ als in _XML_ worden uitgedrukt. Koppeltaal gebruikt HTTP als transportmechanisme om FHIR berichten \(resources\) uit te kunnen wisselen en _Atom feed_ om FHIR resources te bundelen. De kern van FHIR wordt gevormd door de _FHIR DSTU1 resources_, waarmee oplossingen voor uitwisseling van zorginhoudelijke gegevens kunnen worden gebouwd. Door middel van profiling \(het maken van specificaties in de vorm van structure definitions en extensions\) en onderlinge verwijzingen is het mogelijk een specifieke set van FHIR resources voor een bepaalde use case, binnen een domein, te definiëren. Elke applicatie type \(eHealth platformen, portalen, interventies of bronsystemen\) gebruikt een eigen set van FHIR resources die via een adapter \(programmeertaal afhankelijke abstractie laag\) met Koppeltaal berichten uitwisselt over het openbare internet.
+Het transport van berichten volgens Koppeltaal v1.x is gebaseerd op een aantal standaarden: met name _HTTP_, _HL7 FHIR DSTU 1_ \(v0.0.82\) en relevante onderdelen van de HL7 standaard. De content \(inhoud\) kan zowel in _JSON_ als in _XML_ worden uitgedrukt. Koppeltaal gebruikt HTTP als transportmechanisme om FHIR berichten \(resources\) uit te kunnen wisselen en _Atom feed_ om FHIR resources te bundelen. De kern van FHIR wordt gevormd door de _FHIR DSTU1 resources_, waarmee oplossingen voor uitwisseling van zorginhoudelijke gegevens kunnen worden gebouwd. Door middel van profiling \(het maken van specificaties in de vorm van structure definitions en extensions\) en onderlinge verwijzingen is het mogelijk een specifieke set van FHIR resources voor een bepaalde use case, binnen een domein, te definiëren. Elke applicatie type \(eHealth platformen, portalen, interventies of bronsystemen\) gebruikt een eigen set van FHIR resources die via een adapter \(programmeertaal afhankelijke abstractie laag\) met Koppeltaal berichten uitwisselt over het openbare internet.
 
 ![FHIR Messaging over HTTP.](.gitbook/assets/fhir-messaging-bericht%20%281%29.jpg)
 
@@ -2883,43 +2883,19 @@ Notitie: De System Uri’s vindt men bij \[http://fhir.nl/fhir/NamingSystems/\[S
 
 ## Beveiliging
 
-De communicatie en gegevensuitwisseling tussen de Koppeltaal Server en de applicaties uit een domein \(GGZ instelling\) is vertrouwelijk \(vertrouwensniveau:**midden**\) en mag alleen toegankelijk zijn voor personen die hier vanuit hun functie toegang toe moeten hebben \(need-to-know basis\).
+De communicatie en gegevensuitwisseling tussen de Koppeltaal Server en de applicaties uit een domein volgen de ICT-beveiligingsrichtlijnen voor Transport Layer Security \(TLS\) v2.0 van het Nationaal Cyber Security Centrum \(NCSC\). Versie 2.0 is op 23 april 2019 gepubliceerd. 
 
-Voor het realiseren van vertrouwensniveau midden is het toepassen van SSL/TLS protocol vodoende. Wanneer een \(GGZ\) applicatie een verbinding opzet met de Koppeltaal Server, past de \(GGZ\) applicatie een SSL/TLS-sessie toe met:
+Zie: [https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls](https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls)
 
-· authenticatie van de Koppeltaal Server op basis van een \(PKI-O\) certificaat,
+VZVZ _vereist_ dat de veiligheidsniveau \(zoals beschreven in de ICT-beveiligingsrichtlijnen\) voor het Transport Layer Security-protocol \(TLS\) minimaal moeten voldoen aan: "_Voldoende of hoger_". TLS is het gebruikte protocol voor het opzetten en gebruiken van een cryptografisch beveiligde verbinding tussen twee computersystemen, een cliënt en een server.
 
-· meesturen van certificaten,
+Organisaties die gebruik maken van een ‘uit te faseren’ TLS-configuratie moeten deze configuratie op termijn vervangen. Anders lopen organisaties het risico dat zij niet voldoen aan de beveiligingseisen die volgen uit de AVG.
 
-· toepassen van SSL v3.0 of TLS 2.0
+Verder volgt VZVZ de ICT-beveiligingsrichtlijnen voor Webapplicaties,  om een bepaalde mate van veiligheid voor Koppeltaal te bereiken. Deze richtlijnen hebben niet alleen betrekking op webapplicaties, maar ook op de beheeromgeving en de omringende hard- en softwareomgeving die noodzakelijk is om webapplicaties te laten functioneren.
 
-· RSA\_WITH\_RC4\_128\_MD5 of RSA\_WITH\_RC4\_128\_SHA,
+Zie: [https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-webapplicaties](https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-webapplicaties)
 
-· maximum sessieduur van x minuten,
-
-· maximum ongebruikte sessie van x minuten,
-
-· {toekomst} nader te bepalen maximum aantal verbindingen.
-
-Ondersteuning van minimaal de volgende tls en cipher suites:
-
-· TLS\_AES\_256\_GCM\_SHA384 \(0x1302\) ECDH secp256r1 \(eq. 3072 bits RSA\) FS
-
-· TLS\_AES\_128\_GCM\_SHA256 \(0x1301\) ECDH secp256r1 \(eq. 3072 bits RSA\) FS
-
-Technische items uit RFC5289:
-
-· Protocol: TLS staat voor Transport Layered Security
-
-· Encryptie: AES staat voor Advance Encryption Standard with xxx bit key in Galois/Counter Mode
-
-· Hash: Secure Hash Algoritme xxx
-
-· Sleutel uitwisseling: ECDH refereert naar de encryptie protocol \(Elliptic curve Diffie–Hellman\)
-
-· Secp256r1 refereert naar de elliptic curve dat door de cipher gebruikt wordt
-
-· FS betekent dat de cipher Forarwd Secrecy ondersteunt
+Het NCSC is verantwoordelijk voor het opstellen en onderhouden van bovenstaande richtlijnen en zal ze periodiek actualiseren. Indien noodzakelijk zal het NCSC tussentijds door middel van een addendum of erratum de richtlijnen aanpassen. Daarnaast wordt in beveiligingsrichtlijnen verwezen naar andere relevante normen of standaarden zoals de Open Web Application Security Project \(OWASP\) Top 10 Web Applicaties beveiligingsrisico's.
 
 ## Autorisatie beheer
 
