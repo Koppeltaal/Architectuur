@@ -1915,6 +1915,9 @@ CareTeam \(Other\)
 CarePlanActivityStatus \(Other\)
 
 ### CarePlanActivityResult \(Other\)
+### Deprecated CarePlanActivityResult \(Other\)
+
+**De FHIR resource "CarePlanActivityResult" is niet in Koppeltaal 1.3.x geïmplementeerd door Koppeltaal leveranciers, en wordt door de Koppeltaal architectuur afgeraden om deze in te zetten om de resultaten van een activiteit op te vragen.**
 
 <table>
   <thead>
@@ -2555,7 +2558,7 @@ Practitioner
 | Type | CodeableConcept |
 | **RelatedPerson.address** |  |
 | Definition | Addresses for the individual. |
-| Control | 0..\* |
+| Control | 0..1 |
 | Type | Address |
 | Extension | Related Person may have multiple addresses with different uses or applicable periods. Only applicable when a related person is not anonymous. |
 | **RelatedPerson.photo** |  |
