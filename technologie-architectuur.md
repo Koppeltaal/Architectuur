@@ -1918,7 +1918,6 @@ CarePlanActivityStatus \(Other\)
 
 **De FHIR resource "CarePlanActivityResult" is niet in Koppeltaal 1.3.x geïmplementeerd door Koppeltaal leveranciers, en wordt door de Koppeltaal architectuur afgeraden om deze in te zetten om de resultaten van een activiteit op te vragen.**
 
-
 <table>
   <thead>
     <tr>
@@ -2472,6 +2471,34 @@ Organization
 | Control | 1..\* |
 | Type | HumanName |
 | Comments | The person may have multiple names with different uses or applicable periods. In the Koppeltaal context, a Patient must have at least one name, which can be a nickname. |
+| **Patient.name.use** |  |
+| Definition | usual \| offical \| tem \| nickname \| anonymous \| old \| maiden |
+| Control | 0..1 |
+| Type | code |
+| **Patient.name.text** |  |
+| Definition | Text representation of the full name. |
+| Control | 0..1 |
+| Type  | string |
+| **Patient.name.family** |  |
+| Defintion | Family name \(often called surname\). |
+| Control | 1..\* |
+| Type | string |
+| **Patient.name.given** |  |
+| Definition | Given name \(not always first\). Includes middle names. |
+| Control | 1..\* |
+| Type | string |
+| **Patient.name.prefix** |  |
+| Definition | Parts that come before the name. |
+| Control | 0..\* |
+| Type | string |
+| **Patient.name.suffix** |  |
+| Definition | Parts that comes after the name. |
+| Control | 0..\* |
+| Type | string |
+| **Patient.name.period** |  |
+| Definition | Time period when name was/is in use |
+| Control | 0..1 |
+| Type | Period |
 | **Patient.telecom** |  |
 | Definition | A contact detail \(e.g. a telephone number or an email address\) by which the individual may be contacted. |
 | Control | 0..\* |
