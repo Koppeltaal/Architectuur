@@ -1136,7 +1136,8 @@ Tabel 2. FHIR Bundle \(Atom feed\) De verschillende onderdelen van de FHIR feed 
       <td style="text-align:left">Definition</td>
       <td style="text-align:left">Contains or links to the content of the entry. The content is FHIR Resource
         specific and uses FHIR namespace (&#x201C;http://hl7.org/fhir) to define
-        the FHR Resource</td>
+        the FHR Resource. The content is optional, but SHALL always be present
+        except in the special case of a transaction response.</td>
     </tr>
     <tr>
       <td style="text-align:left">Control</td>
@@ -1706,7 +1707,7 @@ ActivityDefinition \(Other\)
 | Comments | The ActivityDefinition identified by this field may be located either directly in the bundle or in the set of ActivityDefinitions available at the Koppeltaal Server. |
 | **CarePlan.activity.type** | **Obsolete** |
 | Definition | The type of activity. |
-| Control | 1..1 |
+| Control | 0..1 |
 | Type | Coding |
 | Binding | [ActivityKind](technologie-architectuur.md#activitykind) |
 | Extension | http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan\#ActivityKind |
