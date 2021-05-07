@@ -491,7 +491,7 @@ content-length: 0
 koppeltaalmessageidentifier: 02a36592-d8a7-418c-bdcf-bbef84ee81c5
 iextoutboundinterface: FHIRNotifications
 category: http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#TestDomain; scheme="http://hl7.org/fhir/tag/security"; label="TestDomain"
-authorization: bearer ...JTW...
+authorization: bearer ...JWT...
 ```
 
 
