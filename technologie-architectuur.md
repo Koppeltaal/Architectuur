@@ -470,7 +470,8 @@ Koppeltaal biedt een functie aan om notificaties te versturen als er een nieuw b
 
 * Een WebHook URL definiëren, tijdens de registratie en configuratie van een applicatie in het domein, die Koppeltaal kan aanroepen.
 * De lokale implementatie achter de WebHook URL is nodig om notificaties te kunnen interpreteren. Koppeltaal zal een event genereren, ter informatie dat er ‘nieuwe’ berichten beschikbaar zijn. De betreffende applicatie wordt maximaal 5 keer gesignaleerd. De applicatie kan daarna het bericht lezen zoals al beschreven in paragraaf [Bericht ophalen](informatiesystemen-architectuur.md#bericht-ophalen). 
-* In de notificatie wordt een correlatie id \(MessageHeader.identifier\) meegestuurd van het bericht dat beschikbaar is voor de applicatie.
+* In de notificatie wordt een correlatie id \(MessageHeader.identifier\) meegestuurd van het bericht dat beschikbaar is voor de applicatie, **deze identifier is niet te gebruiken in een searchquery zoals beschreven in paragraaf [Bericht ophalen](informatiesystemen-architectuur.md#bericht-ophalen)**
+* Leden van de community raden aan om naast de webhook ook periodiek berichten te pollen.
 
 De resthook stuurt informatie in het volgende format:
 ```
