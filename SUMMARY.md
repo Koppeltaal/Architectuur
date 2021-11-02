@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Koppeltaal 1.3.x architectuur](README.md)
+* [Koppeltaal 1.3.x Architectuur](README.md)
 * [Bedrijfsarchitectuur](bedrijfsarchitectuur.md)
 * [Informatiesystemen architectuur](informatiesystemen-architectuur.md)
 * [Technologie architectuur](technologie-architectuur.md)
@@ -9,4 +9,3 @@
 * [Voorbeelden Koppeltaal berichten](voorbeelden-berichtenverkeer.md)
 * [Quick technical basics](quick-technical-basics.md)
 * [Opbouw Koppeltaal Server](opbouw-koppeltaal-server.md)
-
